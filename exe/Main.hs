@@ -59,7 +59,7 @@ main = do
     let (minPriority, logFilePath, includeExamplePlugins) =
           case args of
             Ghcide GhcideArguments{ argsTesting, argsDebugOn, argsLogFile, argsExamplePlugin } ->
-              let minPriority = if argsDebugOn || argsTesting then Debug else Info
+              let minPriority = if argsDebugOn || argsTesting then Debug else Debug
               in (minPriority, argsLogFile, argsExamplePlugin)
             _ -> (Info, Nothing, False)
 
